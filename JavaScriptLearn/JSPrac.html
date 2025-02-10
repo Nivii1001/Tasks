@@ -1,0 +1,53 @@
+ <html>
+    <head>
+        <title>New project</title>
+          
+ </head>
+ <body>
+    <input type="text" id="tex" onkeyup="press()">
+    <h1 id="h"></h1>
+
+    <button onclick="addHello()" id="add">ADD</button>
+    <div id="h1"></div>
+
+    <button onclick="changeClr()" id="clr">CHANGE CLR</button>
+
+     <h1 id="show"></h1>
+     <button onclick="showName(event)" id="click">Nivii</button>
+     <button onclick="showName(event)" id="click">Chan</button>
+     <button onclick="showName(event)" id="click">Shobs</button>
+
+    <script>
+
+//    <!-- while giving i/p in the text box the same text should come simultaneously... -->
+
+        var t=document.getElementById("tex")
+        var res=document.getElementById("h")
+        function press(){
+            res.textContent=t.value;
+        }
+
+        // while clicking on the add button the hello should repeat 
+        var result=document.getElementById("h1")
+        function addHello(){
+            var list=document.createElement("h1")
+            list.textContent=t.value
+            result.append(list)
+
+        }
+
+        // change the colour of the button while clicking the button
+        var clrr=document.getElementById("clr");
+        function changeClr(){
+           clr.style.backgroundColor="red";
+        }
+    // While clicking the button above the button the name inside the btn should show in h1
+          var txt=document.getElementById("show")
+    
+      function showName(event){
+            txt.textContent=event.target.textContent
+
+      }
+    </script>
+ </body>
+ </html>
